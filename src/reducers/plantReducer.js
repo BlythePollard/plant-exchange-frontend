@@ -9,7 +9,7 @@ export default function plantReducer(state = {plants: []}, action) {
         default:
             return state    
     }
-
     //job is to update or store anything that has to do with plants
 }
 
+//successfully updating redux store for plants index!

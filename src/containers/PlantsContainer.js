@@ -14,7 +14,7 @@ class PlantsContainer extends React.Component {
         return (
             <div>
                 <PlantInput />
-                <PlantList />
+                <PlantList plants={this.props.plants}/>
             </div>
         )
     }
