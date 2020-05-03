@@ -2,15 +2,22 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchPlants} from './actions/fetchPlants'
 import PlantsContainer from './containers/PlantsContainer'
+import UserContainer from './containers/UserContainer'
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
 
 class App extends React.Component {
 
   render() {
     return (
+      <Router>
       <div className="App">
-        <PlantsContainer />
+        <Route path ="/home" component={PlantsContainer}/>
+        {/*<Route path="/user" component={UserContainer} />*/}
       </div>
-    
+      </Router>
     );
   }
 }

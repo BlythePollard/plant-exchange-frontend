@@ -3,6 +3,13 @@ import {connect} from 'react-redux';
 import PlantList from '../components/PlantList';
 import PlantInput from '../components/PlantInput'
 import {fetchPlants} from '../actions/fetchPlants'
+import UserLogin from '../components/UserLogin'
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch
+  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class PlantsContainer extends React.Component {
 
@@ -15,9 +22,15 @@ class PlantsContainer extends React.Component {
             <div>
                 <PlantInput />
                 <PlantList plants={this.props.plants}/>
+            <Router>     
+                <Link to="/login" >Login</Link> 
+                <Switch>
+                    <Route path="/login" component={UserLogin}/> 
+                </Switch>
+            </Router>
             </div>
-        )
-    }
+        ) 
+    }//something fishy going on here-- renders login page info at first w/url, then re-renders page
 
 }
 

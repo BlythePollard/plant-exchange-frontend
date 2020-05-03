@@ -16,8 +16,3 @@ export function fetchPlants() {
 //but since fetch takes some time, can't return right away, so we 
 //need to use dispatch inside action creator using thunk
 //return function above is a thunk function
-
-
-
-//dispatchEvent(actionObject) //dispatches data to reducer
-
