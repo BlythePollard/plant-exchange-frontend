@@ -16,7 +16,8 @@ let store = createStore(plantReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}> 
-    <App /> 
+      <App /> 
    </Provider>,
   document.getElementById('root')
 );
+///wrap full app in router component

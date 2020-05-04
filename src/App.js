@@ -3,9 +3,13 @@ import {connect} from 'react-redux';
 import {fetchPlants} from './actions/fetchPlants'
 import PlantsContainer from './containers/PlantsContainer'
 import UserContainer from './containers/UserContainer'
+import UserLogin from './components/UserLogin'
+
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch,
+  Redirect
 } from 'react-router-dom';
 
 class App extends React.Component {
@@ -14,8 +18,11 @@ class App extends React.Component {
     return (
       <Router>
       <div className="App">
-        <Route path ="/home" component={PlantsContainer}/>
-        {/*<Route path="/user" component={UserContainer} />*/}
+      <Switch>
+          <Route path="/login" component={UserLogin}/> 
+          <Route path ="/home" component={PlantsContainer}/>
+           {/*<Route path="/user" component={UserContainer} />*/}      
+      </Switch>
       </div>
       </Router>
     );

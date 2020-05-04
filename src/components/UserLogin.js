@@ -10,3 +10,7 @@ export default class UserLogin extends React.Component {
         )
     }
 }
+
+//current_user available throughout backend
+//form for username, sends to backend(fetch/post), backend returns data or error, save 
+//Globetrotter videos 1-3
