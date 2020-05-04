@@ -12,14 +12,11 @@ class PlantInput extends React.Component {
            [event.target.name]: event.target.value,
        })
     }
-    //event.target.name is inside brackets to show that this value will be the key. first evaluates what's inside the brackets, 
-    //then assigns it as the key
+
 
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.addPlant(this.state)
-        //we have to put this information into the db via an action! this will be similar for login or create account!
-        //send state as argument to addPlant action
     }
     
     render() {

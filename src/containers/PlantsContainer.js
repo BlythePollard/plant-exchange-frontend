@@ -19,8 +19,7 @@ class PlantsContainer extends React.Component {
                 <Link to="/login" >Login</Link> 
             </div>
         ) 
-    }//something fishy going on here-- renders login page info at first w/url, then re-renders page
-//move router into app- index.js
+    }
 }
 
 const mapStateToProps = state => { //this is state from redux store
