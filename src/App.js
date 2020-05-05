@@ -1,5 +1,4 @@
 import React from 'react';
-import {fetchPlants} from './actions/fetchPlants'
 import PlantsContainer from './containers/PlantsContainer'
 import UserList from './components/UserList'
 import UserLogin from './components/UserLogin'
@@ -7,8 +6,7 @@ import UserLogin from './components/UserLogin'
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from 'react-router-dom';
 
 class App extends React.Component {
@@ -20,7 +18,7 @@ class App extends React.Component {
       <Switch>
           <Route path="/login" component={UserLogin}/> 
           <Route path ="/home" component={PlantsContainer}/>
-           <Route path="/userhome" component={UserList} />      
+          <Route path="/userhome" component={UserList} />      
       </Switch>
       </div>
       </Router>

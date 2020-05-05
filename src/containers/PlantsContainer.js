@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PlantList from '../components/PlantList';
-import PlantInput from '../components/PlantInput'
+//import PlantInput from '../components/PlantInput'
 import {fetchPlants} from '../actions/fetchPlants'
 import { Link } from 'react-router-dom';
 
@@ -12,10 +12,9 @@ class PlantsContainer extends React.Component {
     }
 
     render() {
-        console.log(this.props.plants)
+        console.log(this.state)
         return (
             <div>
-                <PlantInput />
                 <PlantList plants={this.props.plants}/>
                 <Link to="/login" >Login</Link> 
             </div>
@@ -23,7 +22,8 @@ class PlantsContainer extends React.Component {
     }
 }
 
-const mapStateToProps = state => {//this is state from redux store
+const mapStateToProps = state => {
+    console.log(state.plants)
     return {
          plants: state.plants
     }

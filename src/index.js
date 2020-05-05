@@ -10,7 +10,7 @@ import App from './App';
 //any component or child that we wrap in provider will have access to 
 //redux store- wrap app in provider
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 

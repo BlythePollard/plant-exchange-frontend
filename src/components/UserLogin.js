@@ -13,8 +13,8 @@ class UserLogin extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        this.props.fetchUser(this.state.username)
-        window.location.href = '/userhome'
+        const response = this.props.fetchUser(this.state.username)
+        this.props.history.push('/userhome')
     }
 
     render() {
