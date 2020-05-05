@@ -1,12 +1,12 @@
-// import React from 'react';
+import React from 'react';
 
-// export default class UserList extends React.Component {
+export default class UserList extends React.Component {
 
-//     render() {
-//         return(
-//             <div>
-//                this is users list
-//             </div>
-//         )
-//     }
-// }
+    render() {
+        return(
+            <div>
+               this is users list
+            </div>
+        )
+    }
+}

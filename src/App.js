@@ -1,7 +1,7 @@
 import React from 'react';
 import {fetchPlants} from './actions/fetchPlants'
 import PlantsContainer from './containers/PlantsContainer'
-import UserContainer from './containers/UserContainer'
+import UserList from './components/UserList'
 import UserLogin from './components/UserLogin'
 
 import {
@@ -20,7 +20,7 @@ class App extends React.Component {
       <Switch>
           <Route path="/login" component={UserLogin}/> 
           <Route path ="/home" component={PlantsContainer}/>
-           {/*<Route path="/user" component={UserContainer} />*/}      
+           <Route path="/userhome" component={UserList} />      
       </Switch>
       </div>
       </Router>

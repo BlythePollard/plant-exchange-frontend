@@ -23,7 +23,7 @@ class PlantsContainer extends React.Component {
     }
 }
 
-const mapStateToProps = state => { //this is state from redux store
+const mapStateToProps = state => {//this is state from redux store
     return {
          plants: state.plants
     }

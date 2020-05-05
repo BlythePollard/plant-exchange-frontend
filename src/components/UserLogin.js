@@ -14,12 +14,13 @@ class UserLogin extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.fetchUser(this.state.username)
+        window.location.href = '/userhome'
     }
 
     render() {
-        return(
+        return( 
             <div>
-               <form onSubmit={this.handleOnSubmit}>
+               <form onSubmit={this.handleOnSubmit}> 
                 <input 
                     type="username" 
                     placeholder="username" 
@@ -27,7 +28,6 @@ class UserLogin extends React.Component {
                     onChange={this.handleOnChange}
                 />
                  <input type='submit' value='Login'/>
-
                </form>
             </div>
         )
