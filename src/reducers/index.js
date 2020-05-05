@@ -6,5 +6,3 @@ export const rootReducer = combineReducers({
     login: loginReducer,
     plants: plantReducer
 });
-
-//does this stuff need to be 

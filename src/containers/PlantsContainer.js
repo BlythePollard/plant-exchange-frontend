@@ -12,6 +12,7 @@ class PlantsContainer extends React.Component {
     }
 
     render() {
+        console.log(this.props.plants)
         return (
             <div>
                 <PlantInput />

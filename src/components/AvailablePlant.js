@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AvailablePlant = (props) => {
+export const AvailablePlant = (props) => {
     const isAvailable = props.isAvailable;
     if(isAvailable == true) {
         return (
