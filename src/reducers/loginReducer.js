@@ -1,0 +1,15 @@
+const initialState = {
+    username: "",
+  }
+
+export default function loginReducer(state = initialState, action) {
+    console.log(action)
+
+    switch(action.type) {
+        case 'FETCH_USER': 
+            return {
+                user: action.payload
+            }
+        default:
+            return state    
+    }

@@ -9,7 +9,5 @@ export const addPlant = (data) => {
             body: JSON.stringify(data)
         })
     }
-
-
 }
 

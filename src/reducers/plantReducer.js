@@ -1,4 +1,5 @@
 export default function plantReducer(state = {plants: []}, action) {
+    console.log(action)
     switch(action.type) {
         case 'FETCH_PLANTS': 
             return {

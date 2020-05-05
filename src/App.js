@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {fetchPlants} from './actions/fetchPlants'
 import PlantsContainer from './containers/PlantsContainer'
 import UserContainer from './containers/UserContainer'
