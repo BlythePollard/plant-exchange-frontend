@@ -4,7 +4,7 @@ const initialState = {
     username: "",
   }
 
-export default function loginReducer(state = initialState, action) {
+export function loginReducer(state = initialState, action) {
     console.log(action)
 
     switch(action.type) {
