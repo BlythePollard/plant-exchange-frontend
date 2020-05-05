@@ -30,6 +30,11 @@ class App extends React.Component {
 
 export default App;
 
+
+//NPM ROUTES ARE LOCALHOST:3001/HOME AND /LOGIN
+
+
+
 //connect(null, {fetchPlants})(App); 
 //connect is saying hey, i want access to this part of the store
 //automatically calling dispatch for us on return value of fetchPlants
