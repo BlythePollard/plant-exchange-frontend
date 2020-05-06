@@ -12,4 +12,4 @@ export function plantReducer(state = {plants: []}, action) {
     //job is to update or store anything that has to do with plants
 }
 
-//successfully updating redux store for plants index!
+//successfully updating redux store for plants index!localStorage.token

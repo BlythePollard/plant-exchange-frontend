@@ -5,6 +5,10 @@ import {fetchUser} from '../actions/fetchUser'
 class UserLogin extends React.Component {
     state = { username: ''}
 
+    // componentDidMount = () => {
+    //     this.props.getProfileFetch()
+    // }
+
     handleOnChange = (event) => {
         this.setState({
             username: event.target.value,

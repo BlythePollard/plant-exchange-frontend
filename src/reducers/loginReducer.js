@@ -1,7 +1,7 @@
 import {LOGIN_USER} from '../actions/types'
 
 const initialState = {
-    username: "",
+    user: "",
   }
 
 export function loginReducer(state = initialState, action) {

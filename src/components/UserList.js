@@ -2,8 +2,14 @@ import React from 'react';
 import PlantInput from '../components/PlantInput'
 import {connect} from 'react-redux';
 import PlantCards from '../components/PlantCards'
+import {getProfileFetch} from '../actions/getProfileFetch'
+
 
 class UserList extends React.Component {
+
+    componentDidMount = () => {
+        this.props.getProfileFetch()
+    }
 
     render() {
         localStorage.setItem('userInfo', this.props)
@@ -29,7 +35,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(UserList)
+export default connect(mapStateToProps, {getProfileFetch})(UserList)
 
 // {userPlants: {…}}
 // userPlants:
