@@ -1,6 +1,6 @@
 import React from 'react';
 import PlantsContainer from './containers/PlantsContainer'
-import UserList from './components/UserList'
+import UserList from './containers/UserContainer'
 import UserLogin from './components/UserLogin'
 
 import {
