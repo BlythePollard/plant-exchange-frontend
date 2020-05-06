@@ -1,20 +1,30 @@
 import { LOGIN_USER } from './types'
 
-export const fetchUser = (data) => {
-    console.log(data)
+export const fetchUser = (user) => { 
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/sessions', {
+        return fetch('http://localhost:3000/api/v1/sessions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({user})
         })
         .then(resp => resp.json()) //this is working! Data coming through
-        .then(user => dispatch({ //somewhere between here and loginReducer is issue?
-            type: LOGIN_USER,
-            payload: user
-        }))
+        .then(data => {
+            console.log(data.id)
+            if (data.message) {
+                console.log('user not found frontend')
+            } else {
+                localStorage.setItem("token", data.id)
+                dispatch(loginUser(data))
+             }
+        })
     }
 }
+    
+    
+const loginUser = data => ({
+    type: LOGIN_USER,
+    payload: data
+})

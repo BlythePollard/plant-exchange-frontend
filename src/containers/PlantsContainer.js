@@ -12,7 +12,6 @@ class PlantsContainer extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <PlantList plants={this.props.plants}/>
@@ -23,7 +22,6 @@ class PlantsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state.plants)
     return {
          plants: state.plants
     }

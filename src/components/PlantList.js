@@ -9,7 +9,6 @@ export default class PlantList extends React.Component {
     render() { //ok so this is rendering before the fetch- this,props.plants undefined
         //but when comment out jsx, this.props.plants returns nothing once, then data second. 
         //has something to do with reducer/store change
-        console.log(this.props.plants.plants)
         return(
             <div> 
                 {this.props.plants.plants.map(plant => 
