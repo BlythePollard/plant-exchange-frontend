@@ -1,5 +1,4 @@
-//this is an action creator
-//thunk: returns a function from the action creator, which benefits us because we can use it other places
+import { FETCH_PLANTS } from './types'
 
 export function fetchPlants() {
     return (dispatch) => {
@@ -7,7 +6,7 @@ export function fetchPlants() {
     .then(resp => resp.json())
     .then(data => dispatch({
         //dispatch an action to our reducer with the object below, update redux store accordingly
-        type: 'FETCH_PLANTS',
+        type: FETCH_PLANTS,
         payload: data
     }))
     }

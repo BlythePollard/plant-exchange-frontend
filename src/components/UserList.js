@@ -5,6 +5,7 @@ import PlantCards from '../components/PlantCards'
 import {getProfileFetch} from '../actions/getProfileFetch'
 
 
+
 class UserList extends React.Component {
 
     componentDidMount = () => {
@@ -12,12 +13,7 @@ class UserList extends React.Component {
     }
 
     render() {
-        localStorage.setItem('userInfo', this.props)
-        localStorage.getItem('userInfo')
-        // console.log(this.props)
-        // console.log(this.props.login.user)
-        // console.log(this.props.login.user.plants)
-        
+
 
         return(
             <div>
@@ -29,9 +25,10 @@ class UserList extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state)
+    console.log(state.login.user.plants)
     return {
-         login: state.login
+         login: state.login,
+         plants: state.login.user.plants
     }
 }
 
@@ -43,3 +40,5 @@ export default connect(mapStateToProps, {getProfileFetch})(UserList)
 // user:
 // id: 5
 // plants: (5) [{…}, {…}, {…}, {…}, {…}]
+
+//maybe onComponentMount, 

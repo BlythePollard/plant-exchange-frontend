@@ -16,7 +16,11 @@ class PlantInput extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        this.props.addPlant(this.state)
+        const currentState = (this.state)
+        if(localStorage.token != "") {
+            currentState.user_id = localStorage.token //adding user ID to plant
+            this.props.addPlant(currentState) }
+            else { console.log("not logged in!")}
     }
     
     render() {
@@ -37,4 +41,4 @@ class PlantInput extends React.Component {
 
 export default connect(null, {addPlant})(PlantInput)
 
-//how to add user_id to this plant before saving????
+//this page will also fetch all user's plants on load, then pass this info to plantcards!

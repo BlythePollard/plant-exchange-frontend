@@ -18,6 +18,7 @@ class UserLogin extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault();
         const response = this.props.fetchUser(this.state.username)
+        //how to insert an if statement here that only reroutes if fetch finds user?
         this.props.history.push('/userhome')
     }
 

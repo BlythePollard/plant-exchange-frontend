@@ -10,11 +10,10 @@ export const fetchUser = (user) => {
             },
             body: JSON.stringify({user})
         })
-        .then(resp => resp.json()) //this is working! Data coming through
+        .then(resp => resp.json()) 
         .then(data => {
-            console.log(data.id)
             if (data.message) {
-                console.log('user not found frontend')
+                console.log("user not found frontend error") //what do here? not working- would love to 
             } else {
                 localStorage.setItem("token", data.id)
                 dispatch(loginUser(data))

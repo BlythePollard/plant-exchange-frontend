@@ -3,7 +3,6 @@ import { LOGIN_USER } from './types'
 export const getProfileFetch = () => {
     return dispatch => {
       const token = localStorage.token;
-      console.log(token)
       if (token) {
         return fetch(`http://localhost:3000/api/v1/users/${token}`, {
           method: "GET",
@@ -16,8 +15,8 @@ export const getProfileFetch = () => {
           .then(resp => resp.json())
           .then(data => {
             if (data.message) {
-              console.log('no user found frontend')
-              localStorage.removeItem("token")
+                localStorage.removeItem("token")
+                return data.message
             } else {
               dispatch(loginUser(data))
             }

@@ -5,11 +5,10 @@ import React from 'react';
 export default class PlantCards extends React.Component {
 
     render() { 
-        //console.log(this.props.userPlants.login.user)
         //console.log(this.props.userPlants.login.user.plants)
         return(
             <div> 
-                {/* {this.props.userPlants.login.user.map(userPlant => 
+                {/* {this.props.userPlants.user.plants.map(userPlant => 
                 <li key={userPlant.id}>
                     {userPlant.name}
                     <ul>{userPlant.description}</ul>
@@ -19,6 +18,10 @@ export default class PlantCards extends React.Component {
         )
     }
 }
+
+
+//do i need to do a fetch to fetch user plants???
+
 
 
 // {userPlants: {…}}
