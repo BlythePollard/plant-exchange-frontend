@@ -13,18 +13,19 @@ class UserList extends React.Component {
     }
 
     render() {
-        console.log(this.props.login.user.plants)
+        //console.log(this.props.login.user.plants)
         return(
             <div>
           
           
-          <PlantCards userPlants={this.props.login.user.plants}/>
+          
 
                <PlantInput />
             </div>
         )
     }
 }
+//<PlantCards userPlants={this.props.login.user.plants}/>
 //<PlantCards userPlants={this.props.login.user.plants}/>
 
   //     <div> 
@@ -36,9 +37,11 @@ class UserList extends React.Component {
             //     )}
             // </div>
 const mapStateToProps = state => {
+    console.log(state)
+    console.log(state.login)
+    console.log(state.login.user)
     console.log(state.login.user.plants)
     return {
-         login: state.login,
          plants: state.login.user.plants
     }
 }

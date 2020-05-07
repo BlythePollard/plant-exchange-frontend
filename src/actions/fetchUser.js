@@ -1,6 +1,7 @@
 import { LOGIN_USER } from './types'
 
-export const fetchUser = (user) => { 
+export const fetchUser = (user, history) => { 
+  
     return (dispatch) => {
         return fetch('http://localhost:3000/api/v1/sessions', {
             method: 'POST',
@@ -13,10 +14,12 @@ export const fetchUser = (user) => {
         .then(resp => resp.json()) 
         .then(data => {
             if (data.message) {
-                console.log("user not found frontend error") //what do here? not working- would love to 
+                console.log("frontend user fetch error")
+                alert("please try again")
             } else {
                 localStorage.setItem("token", data.id)
                 dispatch(loginUser(data))
+                history.push('/userhome') //would love to reroute here to keep it secret! how to do this??
              }
         })
     }

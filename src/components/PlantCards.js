@@ -5,7 +5,7 @@ import React from 'react';
 export default class PlantCards extends React.Component {
 
     render() { 
-        console.log(this.props.userPlants)
+        //console.log(this.props.userPlants)
         return(
             <div> 
                 {/* {this.props.userPlants.map(userPlant => 
