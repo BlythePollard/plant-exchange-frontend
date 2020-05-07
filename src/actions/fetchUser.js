@@ -16,6 +16,7 @@ export const fetchUser = (user, history) => {
             if (data.message) {
                 console.log("frontend user fetch error")
                 alert("please try again")
+                history.push('/login')
             } else {
                 localStorage.setItem("token", data.id)
                 dispatch(loginUser(data))
