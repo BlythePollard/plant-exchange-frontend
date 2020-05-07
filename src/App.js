@@ -1,6 +1,6 @@
 import React from 'react';
 import PlantsContainer from './containers/PlantsContainer'
-import UserList from './containers/UserContainer'
+import UserContainer from './containers/UserContainer'
 import UserLogin from './components/UserLogin'
 
 import {
@@ -18,7 +18,7 @@ class App extends React.Component {
       <Switch>
           <Route path="/login" component={UserLogin}/> 
           <Route path ="/home" component={PlantsContainer}/>
-          <Route path="/userhome" component={UserList} />      
+          <Route path="/userhome" component={UserContainer} />      
       </Switch>
       </div>
       </Router>

@@ -13,15 +13,28 @@ class UserList extends React.Component {
     }
 
     render() {
+        console.log(this.props.login.user.plants)
         return(
             <div>
-               <PlantCards userPlants={this.props.login}/>
+          
+          
+          <PlantCards userPlants={this.props.login.user.plants}/>
+
                <PlantInput />
             </div>
         )
     }
 }
+//<PlantCards userPlants={this.props.login.user.plants}/>
 
+  //     <div> 
+            //     {this.props.login.user.plants.map(userPlant => 
+            //     <li key={userPlant.id}>
+            //         {userPlant.name}
+            //         <ul>{userPlant.description}</ul>
+            //     </li> 
+            //     )}
+            // </div>
 const mapStateToProps = state => {
     console.log(state.login.user.plants)
     return {
