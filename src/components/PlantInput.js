@@ -40,5 +40,3 @@ class PlantInput extends React.Component {
 }
 
 export default connect(null, {addPlant})(PlantInput)
-
-//this page will also fetch all user's plants on load, then pass this info to plantcards!
