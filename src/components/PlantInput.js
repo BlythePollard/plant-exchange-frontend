@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {addPlant} from '../actions/addPlant'
 
+//controlled form to create new plants
+
 class PlantInput extends React.Component {
     state = {name: '', description: ''}
 
@@ -16,7 +18,7 @@ class PlantInput extends React.Component {
         event.preventDefault();
         const currentState = (this.state)
         if(localStorage.token != "") {
-            currentState.user_id = localStorage.token 
+            currentState.user_id = localStorage.token //adding user ID to plant
             this.props.addPlant(currentState) }
             else { console.log("not logged in!")}
     }
@@ -39,3 +41,4 @@ class PlantInput extends React.Component {
 
 export default connect(null, {addPlant})(PlantInput)
 
+//this page will also fetch all user's plants on load, then pass this info to plantcards!

@@ -12,7 +12,6 @@ class UserLogin extends React.Component {
     }
 
     handleOnSubmit = (event) => {
-        console.log(this.props.history)
         event.preventDefault();
         const response = this.props.fetchUser(this.state.username, this.props.history)
     }
