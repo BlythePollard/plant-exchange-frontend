@@ -1,5 +1,3 @@
-//recieves user info as props
-
 import React from 'react';
 
 export default class PlantCards extends React.Component {
@@ -17,15 +15,3 @@ export default class PlantCards extends React.Component {
         )
     }
 }
-
-
-//do i need to do a fetch to fetch user plants???
-
-
-
-// {userPlants: {…}}
-// userPlants:
-// login:
-// user:
-// id: 5
-// plants: (5) [{…}, {…}, {…}, {…}, {…}]

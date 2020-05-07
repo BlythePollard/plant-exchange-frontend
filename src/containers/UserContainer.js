@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import PlantCards from '../components/PlantCards'
 import {getProfileFetch} from '../actions/getProfileFetch'
 
-
-
 class UserList extends React.Component {
 
     componentDidMount = () => {
@@ -23,22 +21,9 @@ class UserList extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state)
-    console.log(state.login)
-    console.log(state.login.user)
-    console.log(state.login.user.plants)
     return {
          plants: state.login.user.plants
     }
 }
 
 export default connect(mapStateToProps, {getProfileFetch})(UserList)
-
-// {userPlants: {…}}
-// userPlants:
-// login:
-// user:
-// id: 5
-// plants: (5) [{…}, {…}, {…}, {…}, {…}]
-
-//maybe onComponentMount, 

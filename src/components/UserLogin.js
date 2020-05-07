@@ -5,10 +5,6 @@ import {fetchUser} from '../actions/fetchUser'
 class UserLogin extends React.Component {
     state = { username: ''}
 
-    // componentDidMount = () => {
-    //     this.props.getProfileFetch()
-    // }
-
     handleOnChange = (event) => {
         this.setState({
             username: event.target.value,
@@ -19,8 +15,6 @@ class UserLogin extends React.Component {
         console.log(this.props.history)
         event.preventDefault();
         const response = this.props.fetchUser(this.state.username, this.props.history)
-        //how to insert an if statement here that only reroutes if fetch finds user?
-        //this.props.history.push('/userhome')
     }
 
     render() {
@@ -41,8 +35,3 @@ class UserLogin extends React.Component {
 }
 
 export default connect(null, {fetchUser})(UserLogin)
-
-
-//current_user available throughout backend
-//form for username, sends to backend(fetch/post), backend returns data or error, save 
-//Globetrotter videos 1-3

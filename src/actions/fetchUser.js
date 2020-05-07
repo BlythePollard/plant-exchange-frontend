@@ -20,7 +20,7 @@ export const fetchUser = (user, history) => {
             } else {
                 localStorage.setItem("token", data.id)
                 dispatch(loginUser(data))
-                history.push('/userhome') //would love to reroute here to keep it secret! how to do this??
+                history.push('/userhome') 
              }
         })
     }
