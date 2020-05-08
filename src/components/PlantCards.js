@@ -9,7 +9,6 @@ class PlantCards extends React.Component {
     }
 
     render() { 
-        console.log(this.props)
         return(
             <div> 
                 {this.props.userPlants.map(userPlant => 

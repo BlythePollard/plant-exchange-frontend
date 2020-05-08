@@ -16,7 +16,6 @@ class PlantInput extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state)
         const currentState = (this.state)
         if(localStorage.token != "") {
             currentState.user_id = localStorage.token //adding user ID to plant

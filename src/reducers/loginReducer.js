@@ -1,6 +1,6 @@
 import {LOGIN_USER} from '../actions/types'
 import {ADD_PLANT} from '../actions/types'
-import {FIND_OWNER} from '../actions/types'
+import {DELETE_PLANT} from '../actions/types'
 
 const initialState = {
     user: {
@@ -11,7 +11,6 @@ const initialState = {
     },
   }
 
-
 export function loginReducer(state = initialState, action) {
 
     switch(action.type) {
@@ -20,14 +19,19 @@ export function loginReducer(state = initialState, action) {
                 user: action.payload
             }
         case ADD_PLANT:
+            let plantsArray = state.user.plants
+            plantsArray = plantsArray.concat(action.payload)
+            let newUser = Object.assign({}, state.user)
+            newUser.plants = plantsArray
             return {
                     ...state,
-                    userPlants: [...state.user.plants, action.payload] //this is creating new piece, userPlants, rather than adding to user.plants
+                    user: newUser
                 }        
-        case FIND_OWNER:
+        case DELETE_PLANT: 
             return {
 
-            }        
+                }
+
         default:
             return state    
     }
