@@ -3,6 +3,9 @@ import {connect} from 'react-redux';
 import PlantList from '../components/PlantList';
 import {fetchPlants} from '../actions/fetchPlants'
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import { LinkContainer } from 'react-router-bootstrap';
+
 
 class PlantsContainer extends React.Component {
 
@@ -14,7 +17,10 @@ class PlantsContainer extends React.Component {
         return (
             <div>
                 <PlantList plants={this.props.plants}/>
-                <Link to="/login" >Login</Link> 
+                <LinkContainer to="/login">
+                 <Button variant="primary">Login</Button>
+                </LinkContainer>
+
             </div>
         ) 
     }

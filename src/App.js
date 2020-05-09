@@ -2,6 +2,8 @@ import React from 'react';
 import PlantsContainer from './containers/PlantsContainer'
 import UserContainer from './containers/UserContainer'
 import UserLogin from './components/UserLogin'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
 
 import {
   BrowserRouter as Router,
@@ -13,13 +15,16 @@ class App extends React.Component {
 
   render() {
     return (
+      
       <Router>
       <div className="App">
+        <Container>
       <Switch>
           <Route path="/login" component={UserLogin}/> 
           <Route path ="/home" component={PlantsContainer}/>
           <Route path="/userhome" component={UserContainer} />      
       </Switch>
+      </Container>
       </div>
       </Router>
     );

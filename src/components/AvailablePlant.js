@@ -12,7 +12,6 @@ class AvailablePlant extends React.Component {
     }
 
     render() { 
-        console.log(this.props)
         return(
             <div>
             <Link onClick={this.handleOnClick}>I'll take it!</Link> 

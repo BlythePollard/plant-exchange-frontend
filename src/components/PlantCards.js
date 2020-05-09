@@ -10,7 +10,6 @@ class PlantCards extends React.Component {
 
     render() { 
         console.log(this.props)
-        console.log(this.props.userPlants)
         return(
             <div> 
                 {this.props.userPlants.map(userPlant => 
