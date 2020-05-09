@@ -27,12 +27,15 @@ export function loginReducer(state = initialState, action) {
                     ...state,
                     user: newUser
                 }        
-        case DELETE_PLANT: 
+        case DELETE_PLANT: //adding a new item to user instead of modifying plants. closer but no dice
+         let updatedArray = state.user.plants
+         const newUserTwo = Object.assign({}, action.payload)
+         newUserTwo.plants = updatedArray
             return {
-
+                user: newUserTwo
                 }
-
         default:
             return state    
     }
 }
+
