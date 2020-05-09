@@ -27,10 +27,10 @@ export function loginReducer(state = initialState, action) {
                     ...state,
                     user: newUser
                 }        
-        case DELETE_PLANT: //adding a new item to user instead of modifying plants. closer but no dice
-         let updatedArray = state.user.plants
-         const newUserTwo = Object.assign({}, action.payload)
-         newUserTwo.plants = updatedArray
+        case DELETE_PLANT:
+        let updatedArray = action.payload
+        const newUserTwo = Object.assign({}, state.user)
+        newUserTwo.plants = updatedArray
             return {
                 user: newUserTwo
                 }
