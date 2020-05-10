@@ -1,6 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {deletePlant} from '../actions/deletePlant'
+import Navbar from '../components/Navbar'
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
+
 
 class PlantCards extends React.Component {
 
@@ -12,13 +16,19 @@ class PlantCards extends React.Component {
         console.log(this.props)
         return(
             <div> 
+                <Navbar/>
+                <CardDeck>
                 {this.props.userPlants.map(userPlant => 
-                <li key={userPlant.id}>
-                    {userPlant.name}
-                    <ul>{userPlant.description}</ul>
-                <button onClick={() => this.handleDelete(userPlant)}></button>
-                </li> 
-                )}
+                
+                <Card border="header" bg="light" key={userPlant.id}>
+                    <Card.Body>
+                        <Card.Title>{userPlant.name}</Card.Title>
+                        <Card.Text>{userPlant.description}</Card.Text>
+                        <button onClick={() => this.handleDelete(userPlant)}>Delete</button>
+                    </Card.Body>
+                </Card>
+                 )}
+                 </CardDeck>
             </div>
         )
     }
@@ -26,4 +36,3 @@ class PlantCards extends React.Component {
 
 export default connect(null, {deletePlant})(PlantCards)
 
-//delete plants from here?

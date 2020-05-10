@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchUser} from '../actions/fetchUser'
+import Navbar from '../components/Navbar'
+
 
 class UserLogin extends React.Component {
     state = { username: ''}
@@ -19,6 +21,8 @@ class UserLogin extends React.Component {
     render() {
         return( 
             <div>
+                <Navbar />
+                <br></br>
                <form onSubmit={this.handleOnSubmit}> 
                 <input 
                     type="username" 

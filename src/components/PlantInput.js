@@ -26,6 +26,7 @@ class PlantInput extends React.Component {
     render() {
         return(
             <div>
+                <br></br>
                 <form onSubmit={this.handleOnSubmit}>
                     <p>Add a New Plant:</p>
                     <input type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleOnChange}/>

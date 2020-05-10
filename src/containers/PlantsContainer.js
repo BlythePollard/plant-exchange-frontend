@@ -5,7 +5,7 @@ import {fetchPlants} from '../actions/fetchPlants'
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { LinkContainer } from 'react-router-bootstrap';
-
+import Navbar from '../components/Navbar'
 
 class PlantsContainer extends React.Component {
 
@@ -16,7 +16,11 @@ class PlantsContainer extends React.Component {
     render() {
         return (
             <div>
+                <Navbar />
+                <br></br>
                 <PlantList plants={this.props.plants}/>
+                <br></br>
+                <br></br>
                 <LinkContainer to="/login">
                  <Button variant="primary">Login</Button>
                 </LinkContainer>
