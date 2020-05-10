@@ -35,9 +35,7 @@ class PlantCards extends React.Component {
                 <br></br>
                 </Col>
                 )}
-                
                  </CardDeck>
-                 
                  </Row>
                  </Container>
             </div>
