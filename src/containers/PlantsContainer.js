@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { LinkContainer } from 'react-router-bootstrap';
 import Navbar from '../components/Navbar'
+import Nav from 'react-bootstrap/Nav'
 
 class PlantsContainer extends React.Component {
 
@@ -17,13 +18,16 @@ class PlantsContainer extends React.Component {
         return (
             <div>
                 <Navbar />
+               <Nav variant="pills">
+                   <Nav.Item>
+                       <Nav.Link href="/login">
+                       <Button variant="primary">Login</Button>
+                       </Nav.Link>
+                   </Nav.Item>
+               </Nav>
                 <br></br>
                 <PlantList plants={this.props.plants}/>
                 <br></br>
-                <br></br>
-                <LinkContainer to="/login">
-                 <Button variant="primary">Login</Button>
-                </LinkContainer>
 
             </div>
         ) 
@@ -37,3 +41,8 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {fetchPlants})(PlantsContainer)
+
+
+{/* <LinkContainer to="/login" >
+<Button variant="primary">Login</Button>
+</LinkContainer> */}

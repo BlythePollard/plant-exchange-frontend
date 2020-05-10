@@ -6,7 +6,7 @@ export default class Header extends React.Component {
     render() {
         return(
             <div>
-                <Navbar>
+                <Navbar >
                 <Navbar.Brand href="/home">PlantExchange Denver</Navbar.Brand>
                 <Navbar.Text>share some plants with your neighbors</Navbar.Text>
                 
