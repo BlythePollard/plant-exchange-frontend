@@ -2,9 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PlantList from '../components/PlantList';
 import {fetchPlants} from '../actions/fetchPlants'
-import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import { LinkContainer } from 'react-router-bootstrap';
 import Navbar from '../components/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
@@ -42,7 +40,3 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, {fetchPlants})(PlantsContainer)
 
-
-{/* <LinkContainer to="/login" >
-<Button variant="primary">Login</Button>
-</LinkContainer> */}
