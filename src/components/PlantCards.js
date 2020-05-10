@@ -4,6 +4,7 @@ import {deletePlant} from '../actions/deletePlant'
 import Navbar from '../components/Navbar'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
+import '../App.css';
 
 
 class PlantCards extends React.Component {
@@ -17,9 +18,8 @@ class PlantCards extends React.Component {
         return(
             <div> 
                 <Navbar/>
-                <CardDeck>
+                <CardDeck className="container">
                 {this.props.userPlants.map(userPlant => 
-                
                 <Card border="header" bg="light" key={userPlant.id}>
                     <Card.Body>
                         <Card.Title>{userPlant.name}</Card.Title>
