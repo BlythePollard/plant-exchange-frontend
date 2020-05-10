@@ -42,20 +42,3 @@ class PlantCards extends React.Component {
 }
 
 export default connect(null, {deletePlant})(PlantCards)
-
-//<Col md={3}>     </Col>
-
-{/* <Row>
-            const numberOfRows = Math.ceil(this.props.userPlants.length / 3)
-
-Array(numberOfRows).fill().map((_, rowIndex) => (
-    <Row key={rowIndex}>
-     {
-       beersArray.slice(rowIndex * 3, (rowIndex *3) + 3).map(beer => (
-        <Col xs="12" sm="4">
-          <BeersListItem key={beer.id} beer={beer} />
-        </Col>
-      ))}
-    </Row>
-))
-</Row> */}
