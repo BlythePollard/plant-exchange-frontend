@@ -6,7 +6,7 @@ import {getProfileFetch} from '../actions/getProfileFetch'
 
 
 
-class UserList extends React.Component {
+class UserList extends React.Component {  //this class name needs to match file!!!
 
     componentDidMount = () => {
         this.props.getProfileFetch()
@@ -29,4 +29,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {getProfileFetch})(UserList)
-

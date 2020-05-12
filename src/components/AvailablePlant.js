@@ -8,7 +8,6 @@ class AvailablePlant extends React.Component {
 
     handleOnClick = event => {
         this.props.findOwner(this.props.user_id)
-        //need to figure out how to access user by plant ID here!
     }
 
     render() { 
