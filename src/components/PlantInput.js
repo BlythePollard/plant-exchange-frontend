@@ -2,8 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {addPlant} from '../actions/addPlant'
 
-//controlled form to create new plants
-
 class PlantInput extends React.Component {
     state = {name: '', description: ''}
 
@@ -12,7 +10,6 @@ class PlantInput extends React.Component {
            [event.target.name]: event.target.value,
        })
     }
-
 
     handleOnSubmit = (event) => {
         event.preventDefault();

@@ -4,9 +4,7 @@ import {connect} from 'react-redux';
 import PlantCards from '../components/PlantCards'
 import {getProfileFetch} from '../actions/getProfileFetch'
 
-
-
-class UserList extends React.Component {  //this class name needs to match file!!!
+class UserContainer extends React.Component {  
 
     componentDidMount = () => {
         this.props.getProfileFetch()
@@ -28,4 +26,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {getProfileFetch})(UserList)
+export default connect(mapStateToProps, {getProfileFetch})(UserContainer)
