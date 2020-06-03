@@ -1,68 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Plant Exchange - Frontend
 
-## Available Scripts
+Plant Exchange is a social app built with Rails, React, and Redux. As its name suggests, the app allows users to exchange plants with each other. A user can upload a plant name and a short description, and this plant then appears on the app homepage. When another user would like to claim this plant, they can access the owner's email address and initiate the exchange. On many social apps like Facebook Marketplace and Craigslist, neighbors ask for money for houseplants and garden plants that they do not want. The idea behind Plant Exchange is to provide a platform for exchanging of plants that is not monetized, but rather is based on sharing and neighborhood connections. 
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+Clone the frontend and backend repos (frontend at https://github.com/BlythePollard/plant-exchange-backend). Navigate to the backend in the terminal. Ensure that dependencies are installed by running 'bundle install', ensure that migrations are completed by running 'rails db:migrate', and seed the two users, user1 and user2, by running 'rails db:seed'.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In one terminal tab, launch the backend using 'rails s'.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+In a second tab, launch the frontend using 'npm start'- allow server to start on http://localhost:3001.
 
-### `yarn test`
+Navigate to http://localhost:3001 to launch the app.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `yarn build`
+This app does not yet have the capability to create an account/register, so please log in as either 'user1' or 'user2', the seeded users. Once logged in, user can upload a new plant and description, view other plants that are available, and click on plants of interest to get the email address of the plant owner. Plant owners are responsible for deleting their plant once it has been claimed by a neighbor. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
